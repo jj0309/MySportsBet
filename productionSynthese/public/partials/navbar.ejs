@@ -1,0 +1,28 @@
+<nav>
+    <a id="absLogo" href="/"><img width=120px height=110px src="/public/images/logo.png" alt="Home"></a>
+    <ul>
+        <div id="liContainer">
+            <div id="NavLinks">
+                <a href="/"><li>Accueil</li></a>
+                <a href="/schedule"><li>Horaire</li></a>
+                <% if(!userData.userData) { %>
+                    <a href="/login"><li>s'identifier</li></a>
+                    <a href="/register"><li>s'enregistrer</li></a>
+                <%}%>
+                <a href="/about"><li>About</li></a>
+                <% if(userData.userData) { %>
+                    <a href="/moncompte"><li>Mon compte</li></a>
+                <%}%>
+            </div>
+            <div id="userContainer">
+                <% if(userData.userData) { %>
+                    <div>
+                        <h4><a href="/moncompte">Bonjour, <%= userData.userData.firstName%></a></h4>
+                        <h6>Solde actuel: $<%=userData.userBalance%> <a id="addBalance" href="/ajouterfond">Ajouter solde</a></h6>
+                        <h5 id="logoutButton" style="position: absolute;top: 5%;left: 97%;"><a href="/logout">logout</a></h5>
+                    </div>
+                <%}%>
+            </div>
+        </div>
+    </ul>
+</nav>

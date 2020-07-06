@@ -1,0 +1,22 @@
+<%- include('partials/header.ejs')  %>
+    <link rel="stylesheet" href="../public/css/myAccount.css">
+    <title>Mon Compte</title>
+</head>
+<body>
+    <%- include('partials/navbar.ejs') %>
+    <div id="PageContainer">
+        <div id="InfoContainer">
+            <div id="InfoFormat">
+                <h2>Username: <%= userData.userData.username %></h2>
+                <h3>Account belongs to: <%= userData.userData.firstName %> <%= userData.userData.lastName %></h3>
+                <h3>User balance: $<%= userData.userBalance %></h3>
+                <h3>Linked email: <%= userData.userData.userEmail %></h3>
+                <a href="#"><h6>change Email</h6></a>
+            </div>
+        </div>
+        <div id="graphContainer">
+
+        </div>
+    </div>
+</body>
+<%- include('partials/footer.ejs')  %> 

@@ -1,0 +1,18 @@
+<% for(let index = 0;index<stats["periods"].length;index++){ %>
+    <% if(stats["sport"] == "nba"){ %>
+        <h4>Quart <%=index+1%></h4>
+        <h5>Tirs: <%= stats["periods"][index]["homeShots"] %></h5>
+        <h5>Panier: <%= stats["periods"][index]["homeScore"] %></h5>
+        <br>
+    <%} else if(stats["sport"] == "nhl") {%>
+        <h4>Periode <%=index+1%></h4>
+        <h5>Tir: <%= stats["periods"][index]["homeShots"] %></h5>
+        <h5>But: <%= stats["periods"][index]["homeScore"] %></h5>
+        <br>
+    <%}else{%>
+        <h4>Inning <%=index+1%></h4>
+        <h5>frappes: <%= stats["periods"][index]["homeHits"] %></h5>
+        <h5>Marque: <%= stats["periods"][index]["homeScore"] %></h5>
+        <br>
+    <%}%>
+<%}%>

@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"monparissportif.nhlschedules"},{"v":{"$numberInt":"2"},"unique":true,"key":{"date":{"$numberInt":"1"}},"name":"date_1","ns":"monparissportif.nhlschedules","background":true}],"uuid":"eee20117ce7344f5a3b94eab39341401"}

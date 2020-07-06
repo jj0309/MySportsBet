@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"monparissportif.bets"}],"uuid":"fe4be36d074449b981c9201d15685008"}

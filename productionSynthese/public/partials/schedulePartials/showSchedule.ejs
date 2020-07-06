@@ -1,0 +1,53 @@
+<h1>HOCKEY SUR GLACE</h1>
+<div class="ScheduleFlexContainer" id="NhlSchedule">
+    <% if(scheduleData[0] != null) { %>
+        <% for(let index=0;index<scheduleData[0].length;index++){ %>
+            <a class="gameReference" href=<%= "/mise/hockey/"+scheduleData[0][index]["docID"]+"/"+scheduleData[0][index]["gameID"] %>>
+                <div class="gameContainer">
+                    <h4>League: NHL</h4>
+                    <h6><%= scheduleData[0][index]["awayTeam"]["abbreviation"] %> <img src=<%= scheduleData[0][index]["awayTeam"]["officialLogoImageSrc"]%>>
+                        <strong>VS</strong> <img src=<%= scheduleData[0][index]["homeTeam"]["officialLogoImageSrc"]%>> <%= scheduleData[0][index]["homeTeam"]["abbreviation"] %></h6>
+                    <h6>Commence le: <%=scheduleData[0][index]["gameTimeStart"]%></h6>
+                </div>
+            </a>
+        <%}%>
+    <%}else{%>
+        <h2>Aucune partie de NHL aujourd'hui</h2>
+    <%}%>
+</div>
+<h1>BASKET-BALL</h1>
+<div class="ScheduleFlexContainer" id="NbaSchedule">
+    <% if(scheduleData[1] != null) { %>
+        <% for(let index=0;index<scheduleData[1].length;index++){ %>
+            <a class="gameReference" href=<%= "/mise/basket/"+scheduleData[1][index]["docID"]+"/"+scheduleData[1][index]["gameID"] %>>
+                <div class="gameContainer">
+                    <h4>League: NBA</h4>
+                    <h6><%= scheduleData["1"][index]["awayTeam"]["abbreviation"] %> <img src=<%= scheduleData[1][index]["awayTeam"]["officialLogoImageSrc"]%>>
+                        <strong>VS</strong> <img src=<%= scheduleData[1][index]["homeTeam"]["officialLogoImageSrc"]%>> <%= scheduleData[1][index]["homeTeam"]["abbreviation"] %></h6>
+                    <h6>Commence le: <%=scheduleData[1][index]["gameTimeStart"]%></h6>
+                </div>
+            </a>
+        <%}%>
+    <%}else{%>
+        <h2>Aucune partie de NBA aujourd'hui</h2>
+    <%}%>
+</div>
+<h1>BASEBALL</h1>
+<div class="ScheduleFlexContainer" id="MlbSchedule">
+    <% if(scheduleData[2] != null) { %>
+        <% for(let index=0;index<scheduleData[2].length;index++){ %>
+            <% if(scheduleData[2].length == 0) { %>
+                <h2>Aucune partie de MLB aujourd'hui</h2>
+                <% break %>
+            <%}%>
+            <a class="gameReference" href=<%= "/mise/baseball/"+scheduleData[2][index]["docID"]+"/"+scheduleData[2][index]["gameID"] %>>
+                <div class="gameContainer">
+                    <h4>League: MLB</h4>
+                    <h6><%= scheduleData[2][index]["awayTeam"]["abbreviation"] %> <img src=<%= scheduleData[2][index]["awayTeam"]["officialLogoImageSrc"]%>>
+                        <strong>VS</strong> <img src=<%= scheduleData[2][index]["homeTeam"]["officialLogoImageSrc"]%>> <%= scheduleData[2][index]["homeTeam"]["abbreviation"] %></h6>
+                    <h6>Commence le: <%=scheduleData[2][index]["gameTimeStart"]%></h6>
+                </div>
+            </a>
+        <%}%>
+    <%}%>
+</div>

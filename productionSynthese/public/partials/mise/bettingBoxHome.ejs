@@ -1,0 +1,5 @@
+<% for(let index = 0;index<bettingObj["home"].length;index++) { %>
+    <% for(key in bettingObj["home"][index]) {%>
+        <h5 class="BettingLog"><%= key%>: $<%= bettingObj["home"][index][key]%></h5>
+    <%}%>
+<%}%>

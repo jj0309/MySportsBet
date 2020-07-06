@@ -1,0 +1,14 @@
+<%- include('partials/header.ejs')  %>
+    <link rel="stylesheet" href="../public/css/schedule.css">
+    <script src="/public/js/schedule/schedule.js"></script>
+    <title>Horaire</title>
+</head>
+<body>
+    <%- include('partials/navbar.ejs') %>
+    <div id="PageContainer">
+        <div id="ScheduleContainer">
+            <%- include('partials/schedulePartials/showSchedule.ejs') %>
+        </div>
+        <%- include('partials/footer.ejs')  %> 
+    </div>
+</body>

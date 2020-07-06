@@ -1,0 +1,55 @@
+<%- include('partials/header.ejs') %> 
+    <link rel="stylesheet" href="/public/css/registration.css" type="text/css">
+    <title>Register</title>
+</head>
+<body>
+    <%- include('partials/navbar.ejs') %>
+    <% if(data["registered"] == true){%>
+        <div id="pageGrid">
+            <div id="registrationInput" style="grid-row: 3/5;grid-column: 3/5;height: 300px;margin: auto;">   
+                <h3>Registration is now complete</h3>
+                <h5>Please check your email inbox</h5>
+            </div>
+        </div>
+    <%}else{%>
+        <div id="pageGrid">
+            <div id="registrationContainer">
+                <img src="/public/images/logo.png" style="margin-left: 35%;"width="120px" height="120px" alt="">
+                <form action="/register" method="POST">
+                    <% if(data["success"] == false){%>
+                        <div id="registrationInput">   
+                            <h5 style="color:red">Some informations are not conform</h5>
+                            <h5 style="color:red">Make sure you have filled all the informations</h5>
+                        </div>
+                    <%}%>
+                    <div id="registrationInput">   
+                        <h5>Your username</h5>
+                        <input id="inputTextBox" name="username" autocomplete="off" type="text">
+                    </div>
+                    <div id="registrationInput">   
+                        <h5>Your lirst name</h5>
+                        <input id="inputTextBox" name="firstName" autocomplete="off" type="text">
+                    </div>
+                    <div id="registrationInput">   
+                        <h5>Your last name</h5>
+                        <input id="inputTextBox" name="lastName" autocomplete="off" type="text">
+                    </div>
+                    <div id="registrationInput">
+                        <h5>Your password</h5>   
+                        <input id="inputTextBox" name="password" placeholder="at least 6 characters" autocomplete="off" type="password">
+                    </div>
+                    <div id="registrationInput">
+                        <h5>Your email</h5>    
+                        <input id="inputTextBox" name="email" autocomplete="off" type="text">
+                    </div>
+                    <div id="registrationInput">   
+                        <h5>Your age</h5>
+                        <input id="inputTextBox" name="age" autocomplete="off" type="text">
+                    </div>
+                    <button id="registrationButton">Create your MySportsBet account</button>
+                </form>
+            </div>
+        </div>
+    <%}%>
+</body>
+<%- include('partials/footer.ejs') %> 

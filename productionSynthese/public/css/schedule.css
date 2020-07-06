@@ -1,0 +1,62 @@
+#PageContainer{
+    height: 100%;
+}
+#ScheduleContainer{
+    padding-top: 112px;/* pour offset le navbar */
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: auto;
+    background-color: #f5f5f7;
+}
+#ScheduleContainer h1{
+    color: darkslategray;
+}
+#ScheduleContainer h1:nth-of-type(1){
+    grid-column: 3/7;
+    text-align: center;
+}
+#ScheduleContainer h1:nth-of-type(2){
+    grid-column: 3/7;
+    text-align: center;
+    margin-top: 1em;
+}
+#ScheduleContainer h1:nth-of-type(3){
+    grid-column: 3/7;
+    text-align: center;
+    margin-top: 1em;
+}
+.gameReference{
+    text-decoration: none;
+    color: black;
+    border: 2px solid brown;
+    border-radius: 5px;
+    margin: 0 1em;
+}
+.ScheduleFlexContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1em;
+    grid-column: 1/9;
+}
+#NhlSchedule *,#NbaSchedule *,#MlbSchedule *{
+    display: flex;
+    flex-direction: column;
+    padding:0 1em;
+    text-align: center;
+}
+.gameReference{
+    opacity: 0;
+}
+.gameReference div img{
+	width: 30px;
+    height:30px;
+    margin: auto;
+}
+.gameReference:hover{
+    background-color: #fd9c3b;
+}
+.ScheduleFlexContainer .gameReference{
+    margin-top: 0.5em;
+}

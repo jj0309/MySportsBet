@@ -1,0 +1,77 @@
+<%- include('partials/header.ejs')  %> 
+    <link rel="stylesheet" href="/public/css/mise.css">
+    <title>Mise</title>
+</head>
+<body>
+    <%- include('partials/navbar.ejs') %>
+    <div id="pageContainer">
+        <div id="BetContainer">
+            <div class="BetContainerContent" id="AwayTeam">
+                <h2><%= game["schedule"]["awayTeam"]["abbreviation"] %></h2>
+                <img width=303px height=345px src=<%= teamImg[game["schedule"]["awayTeam"]["abbreviation"]] %>>
+                <div class="ScoreBox">
+                    <h3>Score: <%= game["score"]["awayScoreTotal"] %></h3>
+                    <br>
+                    <div class="statsForNerds">
+                        <%- include('partials/mise/miseStatsAway.ejs') %>
+                    </div>
+                </div>
+                <%if(game["schedule"]["playedStatus"] != "COMPLETED"){%>
+                    <div>
+                        <h3>cotes de paris: <%=bettingOddsAway%></h3>
+                        <h2>PLACER UN PARIS</h2>
+                        <form method="POST" action=<%= "/mise/"+sport+"/"+dbObjID+"/"+dbGameIndex+"/away" %>>
+                            <input class="AmountInput" maxlength="7" name="amount" type="text">
+                            <button type="submit" class="BetButton">BET</button>
+                        </form>
+                    </div>
+                <%}%>
+                <div>
+                    <h5>Entrée de paris</h5>
+                    <div class="EntryBox">
+                        <%- include('partials/mise/bettingBoxAway.ejs')%>
+                    </div>
+                </div>
+            </div>
+            <div class="BetContainerContent" id="mid">
+                <h5>Temps de début: <%= game["schedule"]["startTime"] %></h5>
+                <h3>
+                    <%if(game["schedule"]["playedStatus"] == "COMPLETED"){%>
+                        PERIODE/QUART: FINI
+                    <%}else{%>
+                        <%= game["score"]["currentPeriod"] %>
+                    <%}%>
+                </h3>
+                <h3>AU: <%= game["schedule"]["venue"]["name"] %></h3>
+            </div>
+            <div class="BetContainerContent" id="HomeTeam">
+                <h2><%= game["schedule"]["homeTeam"]["abbreviation"] %></h2>
+                <img width=303px height=345px src=<%= teamImg[game["schedule"]["homeTeam"]["abbreviation"]] %>>
+                <div class="ScoreBox">
+                    <h3>Score: <%= game["score"]["homeScoreTotal"] %></h3>
+                    <br>
+                    <div class="statsForNerds">
+                        <%- include('partials/mise/miseStatsHome.ejs') %>
+                    </div>
+                </div>
+                <%if(game["schedule"]["playedStatus"] != "COMPLETED"){%>
+                    <div>
+                        <h3>cotes de paris: <%=bettingOddsHome%></h3>
+                        <h2>PLACER UN PARIS</h2>
+                        <form method="POST" action=<%= "/mise/"+sport+"/"+dbObjID+"/"+dbGameIndex+"/home" %>>
+                            <input class="AmountInput" maxlength="7" name="amount" type="text">
+                            <button type="submit" class="BetButton">BET</button>
+                        </form>
+                    </div>
+                <%}%>
+                <div>
+                    <h5>Entrée de paris</h5>
+                    <div class="EntryBox">
+                        <%- include('partials/mise/bettingBoxHome.ejs')%>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include('partials/footer.ejs')  %> 

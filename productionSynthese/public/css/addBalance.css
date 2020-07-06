@@ -1,0 +1,24 @@
+#pageContainer{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(5,1fr);
+    height:100%;
+}
+
+form{
+    grid-row: 3/5;
+    grid-column: 3/5;
+    width: 35%;
+    margin: auto;
+    border: 1px solid black;
+    padding: 1em;
+}
+#BillingInput{
+    margin-bottom: 0.5em;
+    margin-left: 1.5em;
+}
+#TransactionMessage{
+    grid-row: 3/5;
+    grid-column: 3/5;
+    text-align: center;
+}

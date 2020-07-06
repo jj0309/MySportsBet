@@ -1,0 +1,53 @@
+#absLogo{
+    position: absolute;
+    left: 1px;
+    top: 0px;
+}
+nav{
+    background: #1a1a1a;
+    height: 7em;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+nav a, nav a:visited{
+    text-decoration: none;
+    color: whitesmoke;
+}
+#NavLinks{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 30%;
+    margin-left: 150px;
+    padding-top: 2em;
+}
+#userContainer{
+    width: 20%;
+    color: whitesmoke;
+}
+#userContainer div{
+    width: 70%;
+    margin:auto;
+}
+#userContainer h4{
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+#addBalance{
+    margin-left: 1em;
+    border-left: 1px solid white;
+    padding-left: 1em;
+}
+#liContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#liContainer li{
+    padding: 1.9em;
+    font-family: 'Oxanium' ;
+}
+#liContainer li:hover{
+    background-color: #d6822e;
+}

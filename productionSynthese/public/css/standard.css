@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+footer{
+    margin-top: 0.5em;
+    text-align: center;
+}
+footer a,footer a:visited{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 0 0.5em;
+}
+/* ligne de footer inspire par https://jsfiddle.net/JoshMesser/55ZfK/ */
+#pageFooterHR{
+    display: block;
+    border: none;
+    color: white;
+    height: 1px;
+    background: black;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
+    margin-top: 1em;
+}

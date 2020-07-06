@@ -1,0 +1,51 @@
+<%- include('partials/header.ejs') %>
+    <link rel="stylesheet" href="/public/css/addBalance.css">
+    <title>Ajout de fond</title>
+</head>
+<body>
+    <%- include('partials/navbar.ejs') %>
+    <div id="pageContainer">
+        <% if(!inPost) {%>
+            <form action="ajouterfond" method="post" autocomplete="off">
+                <div id="BillingForm">
+                    <div id="BillingInput">
+                        <h5>First Name on credit card</h5>
+                        <input type="text" name="firstName">
+                    </div>
+                    <div id="BillingInput">
+                        <h5>Last Name on credit card</h5>
+                        <input type="text" name="lastName">
+                    </div>
+                    <div id="BillingInput">
+                        <h5>Billing address</h5>
+                        <input type="text" name="address">
+                    </div>
+                    <div id="BillingInput">
+                        <h5>Credit card numbers</h5>
+                        <input type="number" name="numbers">
+                    </div>
+                    <div id="BillingInput">
+                        <h5>Expiration date</h5>
+                        <input type="text" name="expMonth" maxlength="2" size="2"><input type="text" name="expYear" maxlength="2" size="2">
+                    </div>
+                    <div id="BillingInput">
+                        <h5>Amount to add</h5>
+                        <input type="text" name="amount">
+                    </div>
+                    <button id="addBalanceButton" style="margin-left: 4.5em;">Add balance</button>
+                </div>
+            </form>
+        <% } else { %>
+            <div id="TransactionMessage">
+            <% if(transaction) { %>
+                <h2 style="color: green;">Transaction has been completed!</h2>
+                <h3>The fund has been added to your account.</h3>
+            <% } else {%>
+                <h2>Something went wrong.If the problem persists, contact us!</h2>
+            <% } %>
+            </div>
+        <% } %>
+    </div>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

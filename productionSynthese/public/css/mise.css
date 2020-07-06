@@ -1,0 +1,47 @@
+#pageContainer{
+    padding-top: 112px;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: auto;
+    background-color: #f5f5f7;
+}
+#BetContainer{
+    border:2px solid lightsteelblue;
+    border-radius: 5px;
+    margin-top: 5%;
+    padding: 2em 0;
+    grid-column: 3/9;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+}
+.BetContainerContent{
+    text-align: center;
+}
+.ScoreBox{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0 1em;
+}
+.AmountInput{
+    width: 7em;
+}
+.BetButton{
+    width: 4em;
+    padding: 0.1em 1em;
+    border-radius: 2px;
+    font-family: 'Oxanium' ;
+    background-color: tomato;
+}
+.BetButton:hover{
+    background-color: lime;
+}
+.EntryBox{
+    border: 1px solid steelblue;
+    border-radius: 5px;
+    margin: 0 1em;
+    padding: 2em 0;
+}
+.BettingLog{
+    color: slategrey;
+}

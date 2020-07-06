@@ -1,0 +1,15 @@
+<%for(let i = 0;i<data.length;i++){%>
+    <%for(let j = 0;j<data[i].length;j++){%>
+        <%if(j == 5){%>
+            <%break%>
+        <%}%>
+        <a class="gameReference" href=<%= "/mise/"+data[i][j]["sportName"]+"/"+data[i][j]["docID"]+"/"+data[i][j]["gameID"] %>>
+            <div id="gameContainer">
+                <h4>Jeu: <%=data[i][j]["sportName"]%></h4>
+                <h6><%= data[i][j]["awayTeam"]["abbreviation"] %> <img src=<%= data[i][j]["awayTeam"]["officialLogoImageSrc"]%>>
+                    <strong>VS</strong> <img src=<%= data[i][j]["homeTeam"]["officialLogoImageSrc"]%>> <%= data[i][j]["homeTeam"]["abbreviation"] %></h6>
+                <br><h6><%= data[i][j]["gameTimeStart"] %></h6>
+            </div>
+        </a>
+    <%}%>
+<%}%>

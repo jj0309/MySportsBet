@@ -1,0 +1,16 @@
+<%- include('partials/header.ejs') %>
+    <link rel="stylesheet" href="/public/css/index.css">
+    <script src="/public/js/index/index.js"></script>
+    <title>Mon Paris Sportif</title>
+</head>
+<body>
+    <%- include('partials/navbar.ejs') %>
+    <div id="pageContainer">
+        <div id="gameIndexContainer"></div>
+        <div id="ScheduleContainer">
+            <%- include('partials/index/scheduleContainerItems.ejs') %>
+        </div>
+        <a id="BtnVoirPlus" href="/schedule"><div id="ButtonViewSchedule">EN VOIR PLUS</div></a>
+    </div>
+</body>
+<%- include('partials/footer.ejs') %>
